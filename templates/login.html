@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spirit University | Login</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#08182cdd,#132f4edd),url("/static/images/campus.jpg") center/cover fixed;display:flex;align-items:center;justify-content:center}.card{width:min(430px,92%);padding:32px;background:#ffffffee;border-radius:24px;box-shadow:0 20px 60px #0007}.logo{text-align:center;margin-bottom:24px}.logo-badge{margin:auto auto 12px;width:64px;height:64px;border-radius:50%;background:#142d4f;color:#fff;display:grid;place-items:center;font-weight:800;font-size:22px}.logo h1{margin:0;color:#142d4f}.logo p{color:#777}.field{margin:14px 0}.field label{display:block;font-weight:700;color:#233;margin-bottom:7px}.field input,.field select{width:100%;padding:13px;border:1px solid #d8dde5;border-radius:10px;font-size:15px;background:#fff}.password-wrap{position:relative}.password-wrap input{padding-right:48px}.eye{position:absolute;right:5px;top:4px;width:40px;height:40px;border:0;background:transparent;cursor:pointer;font-size:18px}.btn{width:100%;padding:14px;border:0;border-radius:10px;background:#142d4f;color:#fff;font-weight:700;font-size:16px;cursor:pointer;margin-top:8px}.msg{padding:11px;border-radius:9px;margin-bottom:12px;background:#ffe8e8;color:#a00}.hint{margin-top:16px;color:#777;text-align:center;font-size:12px}
+</style></head>
+<body><div class="card">
+<div class="logo"><div class="logo-badge">SU</div><h1>Spirit University</h1><p>Classroom Booking Portal</p></div>
+{% with messages=get_flashed_messages(with_categories=true) %}{% for category,message in messages %}<div class="msg">{{message}}</div>{% endfor %}{% endwith %}
+<form method="POST">
+<div class="field"><label>University Email / Student ID / PRN</label><input name="identifier" placeholder="Dinesh / Hari / Jai / Ram" autocomplete="username" required></div>
+<div class="field"><label>Role</label><select name="role" required><option value="">Select role</option><option value="student">Student</option><option value="faculty">Faculty</option><option value="admin">Admin</option></select></div>
+<div class="field"><label>Password</label><div class="password-wrap"><input id="password" type="password" name="password" placeholder="Enter password" autocomplete="current-password" required><button class="eye" type="button" onclick="togglePassword()">👁</button></div></div>
+<button class="btn" type="submit">Sign In</button>
+</form><div class="hint">Use your assigned university account and role.</div>
+</div>
+<script>function togglePassword(){const p=document.getElementById('password');p.type=p.type==='password'?'text':'password'}</script>
+</body></html>

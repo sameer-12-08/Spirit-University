@@ -1,0 +1,31 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="fastapi" />
+          <option value="uvicorn" />
+          <option value="streamlit" />
+          <option value="ortools" />
+          <option value="pandas" />
+          <option value="numpy" />
+          <option value="scikit-learn" />
+          <option value="matplotlib" />
+          <option value="plotly" />
+          <option value="requests" />
+          <option value="pydantic" />
+          <option value="gymnasium" />
+          <option value="stable-baselines3" />
+          <option value="scipy" />
+          <option value="pytest" />
+          <option value="pytest-cov" />
+          <option value="python-logging-loki" />
+          <option value="black" />
+          <option value="flake8" />
+          <option value="mypy" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
